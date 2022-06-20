@@ -4,7 +4,7 @@ employeeType: [
     {
         type: 'List',
         message: 'Rank of employee',
-        name: 'Employee name',
+        name: 'employee',
         Rank: ['Manager', 'Engineer', 'Intern'],
         validate: (value) => { if (value) {return true;} else { return "Note response to move forward"; } },
 
