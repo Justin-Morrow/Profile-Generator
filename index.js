@@ -1,13 +1,12 @@
 const inquirer = require ('inquirer');
 const fs = require('fs');
 const util = require ('util');
-const Employee = require("./lib/Engineer");
+const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Engineer");
-const Manager = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
 const questions = require("./utils/questions");
 const html = require("./utils/generateHtml");
-const { create } = require('domain');
 const employeeList = [];
 
 //Function to initiate the collection of employee data

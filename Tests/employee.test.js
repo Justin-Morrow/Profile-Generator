@@ -6,7 +6,7 @@ test("create an employee object", () => {
 });
 
 test("Can set name by constructor arguments", () => {
-    const name = "Alice";
+    const name = "Bob";
     const employee = new Employee(name);
     expect(employee.name).toBe(name);
 });
@@ -18,31 +18,32 @@ test("Can set id by constructor argument", () => {
 });
 
 test("Can set email by constructor argument", () => {
-    const testValue = "doe@doe.com";
-    const employee = new Employee("Bob", 1, testValue);
+    const testVal = "doe@doe.com";
+    const employee = new Employee("Bob", 1, testVal);
     expect(employee.email).toBe(testVal);
 });
 
 test("Can get name via getName()", () => {
-    const testValue = "Alice";
-    const e = new Employee(testValue);
-    expect(e.getName()).toBe(testValue);
+    const testVal = "Bob";
+    const e = new Employee(testVal);
+    expect(e.getName()).toBe(testVal);
 });
 
 test("Can get id via getId()", () => {
-    const testValue = 95;
-    const employee = new Employee("Bob", testValue);
-    expect(employee.getId()).toBe(testValue);
+    const testVal = 95;
+    const employee = new Employee("Bob", testVal);
+    expect(employee.getId()).toBe(testVal);
 });
 
 test("Can get email via getEmail()", () => {
-    const testValue = "doe@doe.com";
-    const employee = new Employee("Bob", 1, testValue);
-    expect(employee.getEmail()).toBe(testValue);
+    const testVal = "doe@doe.com";
+    const employee = new Employee("Bob", 1, testVal);
+    expect(employee.getEmail()).toBe(testVal);
 });
 
 test("getRole() should return \"Employee\"", () => {
-    const testValue = "Employee";
-    const employee = new Employee("Alice", 1, "test@test.com");
-    expect(employee.getRole()).toBe(testValue);
+    const testVal = "Employee";
+    const employee = new Employee("Bob", 1, "doe@doe.com");
+    expect(employee.getRole()).toBe(testVal);
 });
+
