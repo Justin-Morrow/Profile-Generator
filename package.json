@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Justin-Morrow/Profile-Generator/issues"
   },
-  "homepage": "https://github.com/Justin-Morrow/Profile-Generator#readme"
+  "homepage": "https://github.com/Justin-Morrow/Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^9.0.0"
+  }
 }
