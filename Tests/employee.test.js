@@ -1,23 +1,23 @@
-const Employee = require("../employee");
+const Employee = require("../lib/employee");
 
 test("create an employee object", () => {
     const employee = new Employee
-    expect(typeof(e)).toBe("object");
+    expect(typeof(employee)).toBe("object");
 });
 
-test("Can set name by constructor arguments", () => {
+test("Can set name by constructor", () => {
     const name = "Bob";
     const employee = new Employee(name);
     expect(employee.name).toBe(name);
 });
 
-test("Can set id by constructor argument", () => {
+test("Can set id by constructor", () => {
     const testVal = 95;
     const employee = new Employee("Bob", testVal);
     expect(employee.id).toBe(testVal);
 });
 
-test("Can set email by constructor argument", () => {
+test("Can set email by constructor", () => {
     const testVal = "doe@doe.com";
     const employee = new Employee("Bob", 1, testVal);
     expect(employee.email).toBe(testVal);
@@ -26,7 +26,7 @@ test("Can set email by constructor argument", () => {
 test("Can get name via getName()", () => {
     const testVal = "Bob";
     const e = new Employee(testVal);
-    expect(e.getName()).toBe(testVal);
+    expect(employee.getName()).toBe(testVal);
 });
 
 test("Can get id via getId()", () => {
