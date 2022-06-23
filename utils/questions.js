@@ -67,10 +67,10 @@ schoolName: [
 
 addMore: [ 
     {
-        type: 'input',
+        type: 'confirm',
         message: 'Do you have more employees to add?:',
         name: 'add',
-        validate: (value) => { if (value) { return true; } else { return "Enter your school name to continue"; } },
+        validate: (value) => { if (value) { return true; } else { return "Confirm to continue"; } },
     },
 ],
 
