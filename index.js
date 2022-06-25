@@ -1,10 +1,10 @@
 const inquirer = require ('inquirer');
 const fs = require('fs');
 const util = require ('util');
-const Employee = require("./lib/employee");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
-const Manager = require("./lib/manager");
+const Employee = require("./Library/employee");
+const Engineer = require("./Library/engineer");
+const Intern = require("./Library/intern");
+const Manager = require("./Library/manager");
 const questions = require("./utils/questions");
 const html = require("./utils/generateHtml");
 const employeeList = [];
@@ -34,15 +34,15 @@ const empType = async (empType) => {
     }
     else {
         const school = await inquirer.prompt(questions.schoolName);
-        const InternEmp = new Intern (employeeQs.name, employeeQs.id, employeeQs.email, schoolName.school);
+        const internEmp = new Intern (employeeQs.name, employeeQs.id, employeeQs.email, schoolName.school);
         employeeList.push(internEmp);
     }
-    createAddMore()
+    createMoreEmployees()
 }
 
-const createAddMore = async () => {
+const createMoreEmployee = async () => {
     const goForward = await inquirer.prompt (questions.addMore);
-    if (goForward.goForward) {
+    if (goForward.add) {
         init ()
     } else {
         fs.writeFileSync("index.html", generateHtml(employeeList), "utf-8")
