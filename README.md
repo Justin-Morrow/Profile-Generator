@@ -33,7 +33,7 @@ The program requires a basic opearting system such as windows or iOS needs a web
 
 ## Instructions
 
-The quiz begins by using two items on the integrated terminal. First use "npm run test" to confirm the code passes all of the tests. Then, run "node index.js" in the integrated terminal. At that point, the user enters all of the data for their team under the roles of Manager, Engineer and Intern. Once the team profile is completed, the USER will end the command and an HTML page will generate the team profile for visibility.  
+The quiz begins by using two items on the integrated terminal. First use "npm run test" to confirm the code passes all of the tests. Then, run "node index.js" in the integrated terminal. At that point, the user enters all of the data for their team under the roles of Manager, Engineer and Intern. Once the team profile is completed, the user will end the command and an HTML page will generate the team profile for visibility.  
 
 ## License
 
