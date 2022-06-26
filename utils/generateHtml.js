@@ -18,7 +18,7 @@ const genTeam = team => {
     </div>
         `;
     };
-    
+
     const genEngineer = engineer => {
         return `
     <div class="card employee-card">
@@ -30,7 +30,7 @@ const genTeam = team => {
         <ul class="list-group">
         <li class="list-group-item">ID: ${engineer.getId()}</li>
         <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-        <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></li>
+        <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.getGitHub()}</a></li>
         </ul>
     </div>
     </div>
@@ -54,7 +54,25 @@ const genTeam = team => {
     </div>
         `;
     };
-    
+    const html = [];
+
+    html.push(team
+        .filter(employee => employee.getRole() === "Manager")
+        .map(manager => genManager(manager))
+    );
+    html.push(team
+        .filter(employee => employee.getRole() === "Engineer")
+        .map(engineer => genEngineer(engineer))
+        .join("")
+    );
+    html.push(team
+        .filter(employee => employee.getRole() === "Intern")
+        .map(intern => genIntern(intern))
+        .join("")
+    );
+
+    return html.join("");
+}
     module.exports = team => {
     
     return `
@@ -99,4 +117,3 @@ const genTeam = team => {
         </html>
         `;
 };
-}
