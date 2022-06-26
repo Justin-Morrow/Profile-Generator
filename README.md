@@ -1,5 +1,5 @@
 # Password-Generator
-![Thumbnail](./Misc/Screengrab.png)(https://justin-morrow.github.io/Password-Generator/)
+![Thumbnail](./Misc/Screengrab.png)(https://drive.google.com/file/d/10pHSjcMC7StgcK52za2ip4QXUvBRT-Yp/view)
 ## Table of Contents
 
 - [Description](#Description)
